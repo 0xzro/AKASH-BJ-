@@ -6,7 +6,12 @@
     <title>Akash BJ | Web Developer & Vibe Coder</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="dark-mode"> <!-- Defaults to Dark Mode. Class changes to "light-mode" via JS -->
+
+    <!-- LIGHT / DARK MODE TOGGLE BUTTON -->
+    <div class="theme-switch-wrapper">
+        <button id="theme-toggle" class="theme-btn">⚡ Switch Theme</button>
+    </div>
 
     <!-- HERO SECTION -->
     <header class="hero-section">
@@ -15,7 +20,6 @@
             <p class="tagline">I'm a <strong>Web Developer, Vibe Coder, and Crypto/Web3 Specialist</strong>.</p>
             <p class="bio">
                 I've spent over 5 years building on the web and navigating blockchain ecosystems. 
-                I call myself a <strong>Vibe Coder</strong> because I don't build things the old, slow way. 
                 I pair my development experience with advanced AI workflows to rapidly build, iterate, and ship clean, functional web apps in days instead of weeks. 
                 You bring the vibe and the product vision; I turn it into live software before the momentum cools down.
             </p>
@@ -98,6 +102,7 @@
         </div>
     </footer>
 
+    <!-- LIGHT/DARK THEME SWITCHER SCRIPT -->
+    <script src="script.js"></script>
 </body>
 </html>
-
