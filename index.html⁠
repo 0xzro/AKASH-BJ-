@@ -6,182 +6,139 @@
     <title>Akash BJ | Web Developer & Vibe Coder</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-mode"> <!-- Defaults to Dark Mode -->
+<body class="dark-mode">
 
-    <!-- LIGHT / DARK MODE TOGGLE BUTTON -->
+    <!-- THEME TOGGLE ENGINE -->
     <div class="theme-switch-wrapper">
         <button id="theme-toggle" class="theme-btn">⚡ Switch Theme</button>
     </div>
 
-    <!-- HERO SECTION -->
-    <header class="hero-section">
-        <div class="container">
-            <h1>Hey, I'm Akash BJ.</h1>
-            <p class="tagline">I'm a <strong>Web Developer, Vibe Coder, and Crypto/Web3 Specialist</strong>.</p>
-            <p class="bio">
-                I've spent over 5 years building on the web and navigating blockchain ecosystems. 
-                I pair my development experience with advanced AI workflows to rapidly build, iterate, and ship clean, functional web apps in days instead of weeks. 
-                You bring the vibe and the product vision; I turn it into live software before the momentum cools down.
-            </p>
-            <div class="cta-buttons">
-                <a href="https://t.me/AKASHBJ5742" target="_blank" class="btn btn-primary">Chat on Telegram</a>
-                <a href="#work" class="btn btn-secondary">See What I Do</a>
-            </div>
-        </div>
-    </header>
-
-    <!-- CORE SERVICES / CTA CONVERSATION GATEWAY -->
-    <section id="work" class="services-section">
-        <div class="container">
-            <h2>What I can do for you right now:</h2>
-            
-            <div class="services-grid">
-                <!-- Service 1: Web Dev -->
-                <div class="service-card">
-                    <h3>💻 Web Development & Vibe Coding</h3>
-                    <p class="conversation-prompt">"I have an idea and I need a functional prototype or application built fast."</p>
-                    <p class="service-desc">Landing pages, custom web tools, portfolios, or complete web apps. By pairing traditional stack knowledge with rapid AI iteration, I build responsive, modern websites in a fraction of the usual time.</p>
-                    <a href="https://wa.me/918075801080?text=Hey%20Akash,%20I%20need%20a%20website%20built." target="_blank" class="card-cta">Let’s build your web app →</a>
-                </div>
-
-                <!-- Service 2: P2P Trading -->
-                <div class="service-card highlight">
-                    <h3>🤝 Crypto P2P Services ($USDT / ₹INR)</h3>
-                    <p class="conversation-prompt">"I need to buy, sell, or transfer stable assets safely without the marketplace headaches."</p>
-                    <p class="service-desc">Moving funds securely via P2P in India requires deep execution knowledge. I handle peer-to-peer USDT-to-INR settlement at highly competitive market rates across TRC20, BEP20, and ERC20 setups.</p>
-                    <a href="https://t.me/AKASHBJ5742?text=Hey%20Akash,%20need%20a%20secure%20USDT%20trade." target="_blank" class="card-cta">Let's set up a secure trade →</a>
-                </div>
-
-                <!-- Service 3: Blockchain & Web3 -->
-                <div class="service-card">
-                    <h3>🌐 Blockchain & Web3 Development</h3>
-                    <p class="conversation-prompt">"I want to deploy a custom token, smart contract, or run testnet audits."</p>
-                    <p class="service-desc">From standard stablecoins to volatile native utility tokens, I architect on-chain setups. I set up custom tokens, deploy NFT smart contracts, build DEX liquidity frameworks, and debug testnet cycles.</p>
-                    <a href="https://t.me/AKASHBJ5742?text=Hey%20Akash,%20let's%20talk%20about%20my%20Web3%20launch." target="_blank" class="card-cta">Let's launch your Web3 project →</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- MARKET INSIGHT SECTION -->
-    <section class="insights-section">
-        <div class="container">
-            <h2>Real Talk on the Crypto Markets & Development</h2>
-            <div class="insight-content">
-                <p>
-                    Navigating the crypto space isn't just about reading charts; it's about understanding how token plumbing and liquidity move under the hood. If you're managing capital or building tools, you need to understand the structural differences between asset classes:
+    <main class="showcase-wrapper">
+        
+        <!-- CARD 1: THE INTRO BLOCK (Mapped from top card of image.png) -->
+        <section class="glass-card intro-card">
+            <div class="card-left">
+                <span class="badge">SYSTEM READY</span>
+                <h1 class="glitch-title">Hi, I'm Akash</h1>
+                <h2 class="sub-title">Web Developer & Vibe Coder</h2>
+                <p class="main-bio">
+                    I pair extensive stack experience with advanced AI workflows to rapidly build, iterate, and ship clean, high-performance web applications at lightning speed. You bring the vibe and the project vision; I map the logic and turn it into live production software before the momentum cools down.
                 </p>
-                <ul>
-                    <li>
-                        <strong>The $USDT / ₹INR Spread:</strong> Because USDT tracks the US Dollar, it serves as the base layer for global digital settlements. In the Indian market, local capital constraints and localized demand mean the real P2P peer rate fluctuates distinctly from the strict institutional USD bank conversion. I closely monitor these systemic premiums to clear your trades efficiently.
-                    </li>
-                    <li>
-                        <strong>Stablecoins (Capital Preservation):</strong> Assets like USDT or USDC are pegged to real-world value systems. They serve as your anchor—ideal for preserving trade profits, handling cross-border corporate payments, or setting up secure project treasury management.
-                    </li>
-                    <li>
-                        <strong>Unstable Coins & Tokens (The Volatility & Utility Layer):</strong> This covers ecosystem giants like Bitcoin and Ethereum, alongside local protocol utility tokens. Their valuations shift rapidly based on speculation, utility adjustments, and supply architecture. Building here means you need resilient smart contracts and deep liquidity locking setups so the system doesn't break during market swings.
-                    </li>
-                </ul>
+                <div class="meta-row">
+                    <span>📍 Kochi, India</span>
+                    <span>🟢 Available Now</span>
+                </div>
+                <div class="action-row">
+                    <a href="https://t.me/AKASHBJ5742" target="_blank" class="btn btn-ktm">Hire Me</a>
+                    <a href="https://wa.me/918075801080?text=Hey%20Akash,%20send%20me%20your%20latest%20CV." target="_blank" class="btn btn-outline">Download CV</a>
+                </div>
             </div>
-        </div>
-    </section>
+            <div class="card-right">
+                <!-- Uses your verified image cp.png from the zip bundle -->
+                <div class="avatar-frame">
+                    <img src="cp.png" alt="Akash BJ Avatar" class="profile-img">
+                </div>
+            </div>
+        </section>
 
-    <!-- THE FULL TRACK RECORD STATS -->
-    <section class="stats-section">
-        <div class="container">
-            <h2>The Track Record</h2>
+        <!-- CARD 2: THE CAPABILITIES FRAME (Mapped from bottom card of image.png) -->
+        <section class="glass-card matrix-card" id="work">
+            <div class="matrix-left">
+                <div class="pill-group">
+                    <span class="pill">PORTFOLIO 2026</span>
+                    <span class="pill">WEB3 INFRASTRUCTURE</span>
+                </div>
+                <h3>Welcome to my Portfolio Website</h3>
+                <p class="matrix-desc">
+                    Building responsive, hyper-fast user experiences combined with decentralized logic. Deeply embedded across major layer-1 frameworks, p2p settlement layers, and production styling.
+                </p>
+                <div class="live-status-block">
+                    <span class="status-indicator">● LIVE STATUS</span>
+                    <div class="status-tags">
+                        <span class="tag">USDT/INR Tracking Active</span>
+                        <span class="tag">Vibe Coding Engine Engaged</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- INTERACTIVE DASHBOARD MATRIX CONTROL -->
+            <div class="matrix-right">
+                <div class="core-ui-box">
+                    <div class="ui-header">
+                        <span>CORE UI</span>
+                        <span class="online-tag">ONLINE</span>
+                    </div>
+                    <div class="radar-circle">
+                        <div class="radar-pulse"></div>
+                        <span class="center-text">WELCOME</span>
+                    </div>
+                    <div class="telemetry-grid">
+                        <div class="telemetry-box">
+                            <span class="tel-num">5+ Yrs</span>
+                            <span class="tel-label">Trading & Code</span>
+                        </div>
+                        <div class="telemetry-box">
+                            <span class="tel-num">12ms</span>
+                            <span class="tel-label">Stable Sync</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SERVICES ROW GATEWAY -->
+        <section class="services-row">
+            <div class="service-strip-card highlight">
+                <div class="strip-header">
+                    <h4>🤝 Crypto P2P Services ($USDT / ₹INR)</h4>
+                    <a href="https://t.me/AKASHBJ5742?text=Hey%20Akash,%20need%20a%20secure%20USDT%20trade." target="_blank" class="strip-link">Secure Trade →</a>
+                </div>
+                <p>Facilitating seamless peer-to-peer USDT-to-INR liquidity settlement across India at competitive localized rates. Full multi-network protocol parsing over TRC20, BEP20, and native ERC20 infrastructure safely.</p>
+            </div>
+
+            <div class="service-strip-card">
+                <div class="strip-header">
+                    <h4>🌐 Blockchain Engineering & Web3 Ecosystems</h4>
+                    <a href="https://t.me/AKASHBJ5742?text=Hey%20Akash,%20let's%20talk%20about%20my%20Web3%20launch." target="_blank" class="strip-link">Go On-Chain →</a>
+                </div>
+                <p>Architecting custom cryptographic asset dynamics. Smart contract minting setups, token burn protocols, automated liquidity pool lockups on DEX structures, and rigorous incentivized testnet audits.</p>
+            </div>
+        </section>
+
+        <!-- THE FULL TRACK RECORD STATS -->
+        <section class="stats-card glass-card">
+            <h2>The On-Chain Metrics</h2>
             <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">1,000+</span>
+                    <span class="stat-label">Airdrop & Growth Campaigns Run</span>
+                </div>
                 <div class="stat-item">
                     <span class="stat-number">5+</span>
                     <span class="stat-label">Years Cross-Chain Experience</span>
                 </div>
                 <div class="stat-item">
-                    <span class="stat-number">1k+</span>
-                    <span class="stat-label">Airdrop & Growth Campaigns Run</span>
-                </div>
-                <div class="stat-item">
-                    <span class="stat-number">⚡</span>
-                    <span class="stat-label">AI-Driven Vibe Coding Speed</span>
+                    <span class="stat-number">🎨</span>
+                    <span class="stat-label">Premium UI/UX Brand Kits Built</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- FULL BREAKDOWN OF EXPERTISE -->
-    <section class="breakdown-section">
-        <div class="container">
-            <h2>Full Breakdown of Capabilities</h2>
-            <div class="breakdown-grid">
-                
-                <div class="breakdown-box">
-                    <h3>💻 Web Development & Tech</h3>
-                    <ul>
-                        <li>Custom Web Applications, automation scripts, and custom tools</li>
-                        <li>Clean, fast business & e-commerce layouts built to scale</li>
-                        <li>High-conversion responsive landing pages and slick portfolios</li>
-                        <li>Domain setup, secure hosting configuration, and infrastructure support</li>
-                    </ul>
-                </div>
-
-                <div class="breakdown-box">
-                    <h3>🔒 Crypto Consulting & P2P</h3>
-                    <ul>
-                        <li>Secure buying and selling of USDT against local INR at top-tier rates</li>
-                        <li>Quick cross-border crypto payments and wallet-to-wallet transactions</li>
-                        <li>Multi-network processing across TRC20, BEP20, ERC20, and Layer-2s</li>
-                        <li>Hands-on guidance for setting up multi-sig wallets, hardware keys, and DeFi platforms</li>
-                    </ul>
-                </div>
-
-                <div class="breakdown-box">
-                    <h3>🌐 Web3 & Blockchain Engineering</h3>
-                    <ul>
-                        <li>Token deployment, naming, supply dynamics, ticker setups, and logo branding</li>
-                        <li>NFT contract deployment, metadata setup, and marketplace listings</li>
-                        <li>Setting up DEX liquidity pools, automated token burns, and multi-wallet airdrops</li>
-                        <li>Protocol stress-testing on incentivized testnets and bug bounty participation</li>
-                    </ul>
-                </div>
-
-                <div class="breakdown-box">
-                    <h3>🎨 Graphic Design & UI/UX</h3>
-                    <ul>
-                        <li>High-fidelity wireframes and modern interfaces for web apps and sites</li>
-                        <li>Striking brand identity, corporate logos, and complete visual asset kits</li>
-                        <li>High-CTR YouTube thumbnails, digital marketing banners, and promotional assets</li>
-                        <li>Custom NFT collection artwork generation, animated community GIFs, and motion graphics</li>
-                    </ul>
-                </div>
-
-                <div class="breakdown-box">
-                    <h3>📈 Growth & Content Marketing</h3>
-                    <ul>
-                        <li>Deep copywriting for technical crypto research articles, guides, and whitepapers</li>
-                        <li>Content strategies designed to build communities directly on X (Twitter) and Telegram</li>
-                        <li>Structuring automated viral gleam campaigns and sustainable user retention funnels</li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER / CONTACT LINK -->
-    <footer id="contact" class="footer-section">
-        <div class="container">
-            <h2>Let’s connect.</h2>
-            <p>Skip the formal corporate back-and-forth. Tell me what you're trying to build, what liquidity you need to move, or what token contract you want to launch, and let's make it happen.</p>
+        <!-- FOOTER CONNECT TERMINAL -->
+        <footer class="glass-card footer-card">
+            <h2>Establish Connection</h2>
+            <p>Skip the formal, corporate back-and-forth email loops. Tell me what application you need shipped, what cross-border liquidity you need moved, or what token architecture you are launching.</p>
             <div class="footer-links">
-                <a href="mailto:aaystech@gmail.com" class="link-item">Email Me</a>
+                <a href="mailto:aaystech@gmail.com" class="link-item">Email</a>
                 <a href="https://t.me/AKASHBJ5742" target="_blank" class="link-item">Telegram</a>
                 <a href="https://wa.me/918075801080" target="_blank" class="link-item">WhatsApp</a>
                 <a href="https://instagram.com/akash.bj.in" target="_blank" class="link-item">Instagram</a>
             </div>
             <p class="copyright">&copy; 2026 Akash BJ. Shipped fast with Vibe Coding.</p>
-        </div>
-    </footer>
+        </footer>
 
-    <!-- THEME ENGINE LOGIC -->
+    </main>
+
     <script src="script.js"></script>
 </body>
 </html>
