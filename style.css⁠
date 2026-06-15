@@ -1,3 +1,24 @@
+/* KTM EXACT COLOR THEME ENGINE */
+.dark-mode {
+    --bg: #111111;              /* Matte Black */
+    --bg-card: #1a1a1a;         /* Dark Gray Card */
+    --bg-secondary: #161616;    /* Secondary Dark */
+    --text: #ffffff;            /* Pure White Text */
+    --text-muted: #999999;      /* Muted Gray */
+    --border: #2a2a2a;          /* Soft Dark Border */
+    --ktm-orange: #ff6600;      /* Exact KTM Factory Orange */
+}
+
+.light-mode {
+    --bg: #ffffff;              /* Crisp White */
+    --bg-card: #f7f7f7;         /* Light Gray Card */
+    --bg-secondary: #eeeeee;    /* Secondary Light */
+    --text: #111111;            /* Matte Black Text */
+    --text-muted: #666666;      /* Dark Muted Gray */
+    --border: #dddddd;          /* Soft Light Border */
+    --ktm-orange: #ff6600;      /* Exact KTM Factory Orange */
+}
+
 /* RESET & FONTS */
 * {
     margin: 0;
@@ -5,12 +26,16 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-    background-color: #0b0f19;
-    color: #f3f4f6;
+    background-color: var(--bg);
+    color: var(--text);
     line-height: 1.6;
-    padding: 0;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .container {
@@ -20,33 +45,60 @@ body {
     padding: 4rem 0;
 }
 
+/* THEME TOGGLE SWITCH */
+.theme-switch-wrapper {
+    position: fixed;
+    top: 1.5rem;
+    right: 5%;
+    z-index: 1000;
+}
+
+.theme-btn {
+    background-color: var(--bg-card);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 0.85rem;
+    transition: all 0.2s ease;
+}
+
+.theme-btn:hover {
+    border-color: var(--ktm-orange);
+    color: var(--ktm-orange);
+}
+
 /* HERO SECTION */
 .hero-section {
-    background: linear-gradient(135deg, #111827 0%, #0b0f19 100%);
-    border-bottom: 1px solid #1f2937;
+    background-color: var(--bg-secondary);
+    border-bottom: 1px solid var(--border);
+    padding-top: 6rem;
 }
 
 .hero-section h1 {
-    font-size: 3rem;
-    font-weight: 800;
-    color: #ffffff;
+    font-size: 3.5rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    color: var(--text);
     margin-bottom: 1rem;
     letter-spacing: -0.05em;
 }
 
 .tagline {
     font-size: 1.5rem;
-    color: #9ca3af;
+    color: var(--text-muted);
     margin-bottom: 2rem;
 }
 
 .tagline strong {
-    color: #10b981; /* Crypto Green Accent */
+    color: var(--ktm-orange);
 }
 
 .bio {
     font-size: 1.15rem;
-    color: #d1d5db;
+    color: var(--text-muted);
     max-width: 800px;
     margin-bottom: 2.5rem;
 }
@@ -59,36 +111,42 @@ body {
 
 .btn {
     display: inline-block;
-    padding: 0.75rem 1.5rem;
-    border-radius: 6px;
-    font-weight: 600;
+    padding: 0.85rem 2rem;
+    border-radius: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
     text-decoration: none;
     transition: all 0.2s ease;
 }
 
 .btn-primary {
-    background-color: #10b981;
-    color: #0b0f19;
-}
-
-.btn-primary:hover {
-    background-color: #059669;
-}
-
-.btn-secondary {
-    border: 1px solid #374151;
+    background-color: var(--ktm-orange);
     color: #ffffff;
 }
 
+.btn-primary:hover {
+    background-color: #e05b00;
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    border: 2px solid var(--border);
+    color: var(--text);
+}
+
 .btn-secondary:hover {
-    background-color: #1f2937;
+    border-color: var(--ktm-orange);
+    color: var(--ktm-orange);
 }
 
 /* SERVICES GRID */
 .services-section h2 {
-    font-size: 2rem;
-    margin-bottom: 2rem;
-    color: #ffffff;
+    font-size: 2.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.03em;
 }
 
 .services-grid {
@@ -98,74 +156,79 @@ body {
 }
 
 .service-card {
-    background-color: #111827;
-    border: 1px solid #1f2937;
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
     padding: 2.5rem 2rem;
-    border-radius: 12px;
+    border-radius: 0px; /* Sharp corners for an aggressive racing style */
     display: flex;
     flex-direction: column;
+    transition: transform 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-5px);
 }
 
 .service-card.highlight {
-    border-color: #10b981;
-    background: linear-gradient(180deg, #111827 0%, #0d1e1a 100%);
+    border: 2px solid var(--ktm-orange);
+    position: relative;
 }
 
 .service-card h3 {
-    font-size: 1.35rem;
-    color: #ffffff;
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text);
     margin-bottom: 0.75rem;
 }
 
 .conversation-prompt {
     font-style: italic;
-    color: #6b7280;
+    color: var(--ktm-orange);
     font-size: 0.95rem;
-    margin-bottom: 1rem;
-    border-left: 2px solid #374151;
-    padding-left: 0.5rem;
-}
-
-.service-card.highlight .conversation-prompt {
-    border-color: #10b981;
+    margin-bottom: 1.25rem;
+    border-left: 3px solid var(--ktm-orange);
+    padding-left: 0.6rem;
 }
 
 .service-desc {
-    color: #9ca3af;
+    color: var(--text-muted);
     font-size: 1rem;
     margin-bottom: 2rem;
     flex-grow: 1;
 }
 
 .card-cta {
-    color: #10b981;
+    color: var(--text);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+    letter-spacing: 0.05em;
     transition: color 0.2s ease;
 }
 
-.card-cta:hover {
-    color: #34d399;
-    text-decoration: underline;
+.service-card:hover .card-cta {
+    color: var(--ktm-orange);
 }
 
 /* INSIGHTS / STABLE MARKET SECTION */
 .insights-section {
-    background-color: #0d1322;
-    border-top: 1px solid #1f2937;
-    border-bottom: 1px solid #1f2937;
+    background-color: var(--bg-secondary);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
 }
 
 .insights-section h2 {
-    font-size: 2rem;
-    color: #ffffff;
+    font-size: 2.25rem;
+    font-weight: 800;
+    text-transform: uppercase;
     margin-bottom: 1.5rem;
 }
 
 .insight-content p {
-    font-size: 1.1rem;
-    color: #9ca3af;
-    margin-bottom: 1.5rem;
+    font-size: 1.15rem;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
 }
 
 .insight-content ul {
@@ -173,68 +236,71 @@ body {
 }
 
 .insight-content li {
-    margin-bottom: 1.5rem;
-    padding-left: 1.5rem;
+    margin-bottom: 1.75rem;
+    padding-left: 2rem;
     position: relative;
-    color: #d1d5db;
+    color: var(--text);
 }
 
 .insight-content li::before {
-    content: "•";
-    color: #10b981;
-    font-size: 1.5rem;
+    content: "■"; /* Aggressive square bullet */
+    color: var(--ktm-orange);
+    font-size: 0.9rem;
     position: absolute;
     left: 0;
-    top: -0.2rem;
+    top: 0.1rem;
 }
 
 /* FOOTER SECTION */
 .footer-section {
     text-align: center;
-    background-color: #0b0f19;
+    background-color: var(--bg);
 }
 
 .footer-section h2 {
     font-size: 2.5rem;
-    color: #ffffff;
+    font-weight: 900;
+    text-transform: uppercase;
     margin-bottom: 1rem;
 }
 
 .footer-section p {
-    color: #9ca3af;
+    color: var(--text-muted);
     max-width: 600px;
-    margin: 0 auto 2rem auto;
+    margin: 0 auto 2.5rem auto;
 }
 
 .footer-links {
     display: flex;
     justify-content: center;
-    gap: 2rem;
-    margin-bottom: 3rem;
+    gap: 2.5rem;
+    margin-bottom: 4rem;
+    flex-wrap: wrap;
 }
 
 .link-item {
-    color: #ffffff;
+    color: var(--text);
     text-decoration: none;
-    font-weight: 500;
-    border-bottom: 1px dashed #4b5563;
-    padding-bottom: 0.25rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
 }
 
 .link-item:hover {
-    color: #10b981;
-    border-bottom-color: #10b981;
+    color: var(--ktm-orange);
 }
 
 .copyright {
     font-size: 0.85rem;
-    color: #4b5563 !important;
+    color: var(--text-muted) !important;
 }
 
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
-    .hero-section h1 { font-size: 2.25rem; }
+    .hero-section h1 { font-size: 2.5rem; }
     .cta-buttons { flex-direction: column; }
-    .footer-links { flex-direction: column; gap: 1rem; }
+    .footer-links { flex-direction: column; gap: 1.5rem; }
+    .theme-switch-wrapper { top: 1rem; right: 1rem; }
 }
-
