@@ -1,89 +1,498 @@
-/* STATS SECTION styling */
-.stats-section {
-    border-bottom: 1px solid var(--border);
+/* THE NATIVE KTM VARIABLE SWITCH ENGINE */
+.dark-mode {
+    --bg: #07070a;
+    --bg-glow: radial-gradient(circle at 50% 50%, #150d0a 0%, #07070a 100%);
+    --card-bg: rgba(18, 18, 24, 0.75);
+    --card-bg-secondary: rgba(26, 26, 36, 0.9);
+    --text: #ffffff;
+    --text-muted: #8e929e;
+    --border: rgba(255, 102, 0, 0.15);
+    --ktm-orange: #ff6600; /* Factory KTM Orange */
+    --ktm-glow: rgba(255, 102, 0, 0.4);
+    --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
 }
 
+.light-mode {
+    --bg: #f4f5f6;
+    --bg-glow: radial-gradient(circle at 50% 50%, #fcfdfe 0%, #eef0f2 100%);
+    --card-bg: rgba(255, 255, 255, 0.9);
+    --card-bg-secondary: rgba(240, 242, 245, 0.95);
+    --text: #111111;
+    --text-muted: #61646c;
+    --border: rgba(255, 102, 0, 0.25);
+    --ktm-orange: #ff6600;
+    --ktm-glow: rgba(255, 102, 0, 0.15);
+    --card-shadow: 0 20px 40px rgba(255, 102, 0, 0.05);
+}
+
+/* BASE STYLES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    background-image: var(--bg-glow);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.showcase-wrapper {
+    width: 90%;
+    max-width: 900px;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+/* THE GLOWING GLASS CARDS DEFINITION */
+.glass-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    box-shadow: var(--card-shadow), inset 0 0 20px rgba(255, 255, 255, 0.01);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    padding: 3rem;
+    position: relative;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Creates that exact wrapping KTM halo effect from image.png */
+.glass-card:hover, .service-strip-card:hover {
+    border-color: var(--ktm-orange);
+    box-shadow: var(--card-shadow), 0 0 30px var(--ktm-glow);
+}
+
+/* CARD 1: INTRO CONTAINER */
+.intro-card {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
+}
+
+.card-left {
+    flex: 1;
+}
+
+.badge {
+    display: inline-block;
+    background-color: rgba(255, 102, 0, 0.1);
+    color: var(--ktm-orange);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    letter-spacing: 0.1em;
+    margin-bottom: 1rem;
+    border: 1px solid var(--border);
+}
+
+.glitch-title {
+    font-size: 2.75rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 0.25rem;
+    letter-spacing: -0.04em;
+}
+
+.sub-title {
+    font-size: 1.35rem;
+    color: var(--ktm-orange);
+    font-weight: 700;
+    margin-bottom: 1.25rem;
+}
+
+.main-bio {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 1.75rem;
+}
+
+.meta-row {
+    display: flex;
+    gap: 1.5rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 2rem;
+}
+
+.action-row {
+    display: flex;
+    gap: 1rem;
+}
+
+/* THE RADICAL RACING BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 0.85rem 1.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    text-decoration: none;
+    transition: all 0.2s ease;
+    cursor: pointer;
+}
+
+.btn-ktm {
+    background-color: var(--ktm-orange);
+    color: #ffffff;
+    border: 1px solid var(--ktm-orange);
+}
+
+.btn-ktm:hover {
+    background-color: transparent;
+    color: var(--ktm-orange);
+}
+
+.btn-outline {
+    border: 1px solid var(--border);
+    color: var(--text);
+}
+
+.btn-outline:hover {
+    border-color: var(--ktm-orange);
+    color: var(--ktm-orange);
+}
+
+/* AVATAR FRAME SYSTEM (Rigged for your cp.png) */
+.card-right {
+    display: flex;
+    justify-content: center;
+}
+
+.avatar-frame {
+    width: 240px;
+    height: 240px;
+    background: var(--bg-secondary);
+    border: 1px solid var(--border);
+    overflow: hidden;
+    position: relative;
+}
+
+.profile-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CARD 2: BOTTOM INTERACTIVE MATRIX CONTAINER */
+.matrix-card {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+}
+
+.matrix-left {
+    flex: 1.2;
+}
+
+.pill-group {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.pill {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    border: 1px solid var(--border);
+    padding: 0.2rem 0.6rem;
+    border-radius: 10px;
+}
+
+.matrix-card h3 {
+    font-size: 1.85rem;
+    font-weight: 800;
+    margin-bottom: 1rem;
+    line-height: 1.2;
+}
+
+.matrix-desc {
+    color: var(--text-muted);
+    font-size: 1rem;
+    margin-bottom: 2rem;
+}
+
+.live-status-block {
+    border-top: 1px solid var(--border);
+    padding-top: 1.25rem;
+}
+
+.status-indicator {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--ktm-orange);
+    letter-spacing: 0.05em;
+    margin-bottom: 0.5rem;
+}
+
+.status-tags {
+    display: flex;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.tag {
+    font-size: 0.8rem;
+    background-color: var(--bg-secondary);
+    padding: 0.35rem 0.75rem;
+    color: var(--text);
+    font-weight: 500;
+}
+
+/* DASHBOARD HUD SYSTEM MODULE (Directly from target capture) */
+.matrix-right {
+    flex: 0.8;
+    width: 100%;
+}
+
+.core-ui-box {
+    background-color: rgba(10, 10, 15, 0.4);
+    border: 1px solid var(--border);
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.ui-header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--text-muted);
+    margin-bottom: 1.5rem;
+    letter-spacing: 0.05em;
+}
+
+.online-tag {
+    color: var(--ktm-orange);
+}
+
+.radar-circle {
+    width: 130px;
+    height: 130px;
+    border: 2px dashed var(--border);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.radar-pulse {
+    width: 100px;
+    height: 100px;
+    border: 1px solid var(--ktm-orange);
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: 0 0 15px var(--ktm-glow);
+}
+
+.center-text {
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    color: var(--text);
+}
+
+.telemetry-grid {
+    width: 100%;
+    display: flex;
+    gap: 0.75rem;
+}
+
+.telemetry-box {
+    flex: 1;
+    background-color: rgba(0,0,0,0.2);
+    border: 1px solid var(--border);
+    padding: 0.5rem;
+    text-align: center;
+}
+
+.tel-num {
+    display: block;
+    font-size: 1rem;
+    font-weight: 800;
+    color: var(--text);
+}
+
+.tel-label {
+    font-size: 0.65rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+}
+
+/* STRIP SERVICES LAYOUT BLOCK */
+.services-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.service-strip-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border);
+    padding: 2rem;
+    transition: all 0.3s ease;
+}
+
+.service-strip-card.highlight {
+    border-left: 4px solid var(--ktm-orange);
+}
+
+.strip-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.strip-header h4 {
+    font-size: 1.15rem;
+    font-weight: 700;
+    color: var(--text);
+}
+
+.strip-link {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--ktm-orange);
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.service-strip-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+}
+
+/* STATS SYSTEM DISPLAY GRID */
 .stats-grid {
     display: flex;
     justify-content: space-between;
-    gap: 2rem;
+    gap: 1.5rem;
     flex-wrap: wrap;
+    margin-top: 1.5rem;
+}
+
+.stats-card h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
 }
 
 .stat-item {
     flex: 1;
-    min-width: 250px;
-    background-color: var(--bg-card);
-    border-left: 4px solid var(--ktm-orange);
-    padding: 2rem;
+    min-width: 200px;
+    background-color: var(--card-bg-secondary);
+    padding: 1.5rem;
+    border-top: 2px solid var(--border);
 }
 
 .stat-number {
     display: block;
-    font-size: 3rem;
+    font-size: 2.25rem;
     font-weight: 900;
     color: var(--text);
-    line-height: 1;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.25rem;
 }
 
 .stat-label {
-    font-size: 1rem;
-    color: var(--text-muted);
-    font-weight: 600;
-    text-transform: uppercase;
-}
-
-/* BREAKDOWN SECTION styling */
-.breakdown-section h2 {
-    font-size: 2.25rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    margin-bottom: 2.5rem;
-}
-
-.breakdown-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-    gap: 2.5rem;
-}
-
-@media (max-width: 500px) {
-    .breakdown-grid { grid-template-columns: 1fr; }
-}
-
-.breakdown-box {
-    background-color: var(--bg-secondary);
-    border: 1px solid var(--border);
-    padding: 2rem;
-}
-
-.breakdown-box h3 {
-    font-size: 1.25rem;
-    text-transform: uppercase;
-    color: var(--text);
-    margin-bottom: 1.2rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--border);
-}
-
-.breakdown-box ul {
-    list-style-type: none;
-}
-
-.breakdown-box li {
-    position: relative;
-    padding-left: 1.25rem;
-    margin-bottom: 0.75rem;
-    color: var(--text-muted);
-    font-size: 0.95rem;
-}
-
-.breakdown-box li::before {
-    content: "■";
-    color: var(--ktm-orange);
     font-size: 0.75rem;
-    position: absolute;
-    left: 0;
-    top: 0.1rem;
+    color: var(--text-muted);
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+/* CONNECT TERMINAL FOOTER SYSTEM */
+.footer-card {
+    text-align: center;
+}
+
+.footer-card h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    margin-bottom: 0.75rem;
+}
+
+.footer-card p {
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto 2rem auto;
+    font-size: 1rem;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+}
+
+.link-item {
+    color: var(--text);
+    text-decoration: none;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 0.05em;
+    transition: color 0.2s ease;
+}
+
+.link-item:hover {
+    color: var(--ktm-orange);
+}
+
+.copyright {
+    font-size: 0.75rem;
+    color: var(--text-muted) !important;
+}
+
+/* THEME CONTROLLER FIXED ACTION */
+.theme-switch-wrapper {
+    position: fixed;
+    top: 1.5rem;
+    right: 5%;
+    z-index: 1000;
+}
+
+.theme-btn {
+    background-color: var(--card-bg);
+    color: var(--text);
+    border: 1px solid var(--border);
+    padding: 0.5rem 1rem;
+    border-radius: 0px;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+}
+
+/* DEVICE VIEWPORT RESPONSIVITY DEVIATIONS */
+@media (max-width: 768px) {
+    body { padding: 1rem 0; }
+    .glass-card { padding: 2rem; }
+    .intro-card, .matrix-card { flex-direction: column; text-align: center; gap: 2rem; }
+    .avatar-frame { width: 180px; height: 240px; }
+    .action-row { justify-content: center; }
+    .meta-row { justify-content: center; }
+    .pill-group { justify-content: center; }
+    .strip-header { flex-direction: column; align-items: flex-start; gap: 0.5rem; }
 }
