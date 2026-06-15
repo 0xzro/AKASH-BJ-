@@ -9,7 +9,6 @@ themeToggle.addEventListener('click', () => {
     } else {
         body.classList.remove('light-mode');
         body.classList.add('dark-mode');
-        themeToggle.textContent = '☀️ Light Mode';
+        themeToggle.textContent = '⚡ Switch Theme';
     }
 });
-
