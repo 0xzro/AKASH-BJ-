@@ -16,11 +16,11 @@
             <p class="bio">
                 I've spent over 5 years building on the web and navigating blockchain ecosystems. 
                 I call myself a <strong>Vibe Coder</strong> because I don't build things the old, slow way. 
-                I map out the logic and use advanced AI workflows to rapidly build, iterate, and ship clean, functional web apps in days instead of weeks. 
+                I pair my development experience with advanced AI workflows to rapidly build, iterate, and ship clean, functional web apps in days instead of weeks. 
                 You bring the vibe and the product vision; I turn it into live software before the momentum cools down.
             </p>
             <div class="cta-buttons">
-                <a href="#contact" class="btn btn-primary">Message Me Directly</a>
+                <a href="https://t.me/AKASHBJ5742" target="_blank" class="btn btn-primary">Chat on Telegram</a>
                 <a href="#work" class="btn btn-secondary">See What I Do</a>
             </div>
         </div>
@@ -37,7 +37,7 @@
                     <h3>💻 Web Development & Vibe Coding</h3>
                     <p class="conversation-prompt">"I have an idea and I need a functional prototype or application built fast."</p>
                     <p class="service-desc">Landing pages, custom web tools, portfolios, or complete web apps. By pairing traditional stack knowledge with rapid AI iteration, I build responsive, modern websites in a fraction of the usual time.</p>
-                    <a href="https://wa.me/YOUR_PHONE_NUMBER?text=Hey%20Akash,%20I%20need%20a%20website%20built." class="card-cta">Let’s build your web app →</a>
+                    <a href="https://wa.me/918075801080?text=Hey%20Akash,%20I%20need%20a%20website%20built." target="_blank" class="card-cta">Let’s build your web app →</a>
                 </div>
 
                 <!-- Service 2: P2P Trading -->
@@ -45,7 +45,7 @@
                     <h3>🤝 Crypto P2P Services ($USDT / ₹INR)</h3>
                     <p class="conversation-prompt">"I need to buy, sell, or transfer stable assets safely without the marketplace headaches."</p>
                     <p class="service-desc">Moving funds securely via P2P in India requires deep execution knowledge. I handle peer-to-peer USDT-to-INR settlement at highly competitive market rates across TRC20, BEP20, and ERC20 setups.</p>
-                    <a href="https://t.me/YOUR_TELEGRAM_USERNAME?text=Hey%20Akash,%20need%20a%20secure%20USDT%20trade." class="card-cta">Let's set up a secure trade →</a>
+                    <a href="https://t.me/AKASHBJ5742?text=Hey%20Akash,%20need%20a%20secure%20USDT%20trade." target="_blank" class="card-cta">Let's set up a secure trade →</a>
                 </div>
 
                 <!-- Service 3: Blockchain & Web3 -->
@@ -53,7 +53,7 @@
                     <h3>🌐 Blockchain & Web3 Development</h3>
                     <p class="conversation-prompt">"I want to deploy a custom token, smart contract, or run testnet audits."</p>
                     <p class="service-desc">From standard stablecoins to volatile native utility tokens, I architect on-chain setups. I set up custom tokens, deploy NFT smart contracts, build DEX liquidity frameworks, and debug testnet cycles.</p>
-                    <a href="#contact" class="card-cta">Let's launch your Web3 project →</a>
+                    <a href="https://t.me/AKASHBJ5742?text=Hey%20Akash,%20let's%20talk%20about%20my%20Web3%20launch." target="_blank" class="card-cta">Let's launch your Web3 project →</a>
                 </div>
             </div>
         </div>
@@ -89,9 +89,10 @@
             <h2>Let’s connect.</h2>
             <p>Skip the formal corporate back-and-forth. Tell me what you're trying to build, what liquidity you need to move, or what token contract you want to launch, and let's make it happen.</p>
             <div class="footer-links">
-                <a href="mailto:akash@example.com" class="link-item">Email Me</a>
-                <a href="https://t.me/YOUR_TELEGRAM_USERNAME" class="link-item">Telegram</a>
-                <a href="https://wa.me/YOUR_PHONE_NUMBER" class="link-item">WhatsApp</a>
+                <a href="mailto:aaystech@gmail.com" class="link-item">Email Me</a>
+                <a href="https://t.me/AKASHBJ5742" target="_blank" class="link-item">Telegram</a>
+                <a href="https://wa.me/918075801080" target="_blank" class="link-item">WhatsApp</a>
+                <a href="https://instagram.com/akash.bj.in" target="_blank" class="link-item">Instagram</a>
             </div>
             <p class="copyright">&copy; 2026 Akash BJ. Shipped fast with Vibe Coding.</p>
         </div>
