@@ -6,7 +6,7 @@
     <title>Akash BJ | Web Developer & Vibe Coder</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body class="dark-mode"> <!-- Defaults to Dark Mode. Class changes to "light-mode" via JS -->
+<body class="dark-mode"> <!-- Defaults to Dark Mode -->
 
     <!-- LIGHT / DARK MODE TOGGLE BUTTON -->
     <div class="theme-switch-wrapper">
@@ -63,14 +63,13 @@
         </div>
     </section>
 
-    <!-- INSIGHT SECTION: STABLE VS UNSTABLE ASSETS -->
+    <!-- MARKET INSIGHT SECTION -->
     <section class="insights-section">
         <div class="container">
             <h2>Real Talk on the Crypto Markets & Development</h2>
             <div class="insight-content">
                 <p>
-                    Navigating the crypto space isn't just about reading charts; it's about understanding how token plumbing and liquidity move under the hood. 
-                    If you're managing capital or building tools, you need to understand the structural differences between asset classes:
+                    Navigating the crypto space isn't just about reading charts; it's about understanding how token plumbing and liquidity move under the hood. If you're managing capital or building tools, you need to understand the structural differences between asset classes:
                 </p>
                 <ul>
                     <li>
@@ -83,6 +82,86 @@
                         <strong>Unstable Coins & Tokens (The Volatility & Utility Layer):</strong> This covers ecosystem giants like Bitcoin and Ethereum, alongside local protocol utility tokens. Their valuations shift rapidly based on speculation, utility adjustments, and supply architecture. Building here means you need resilient smart contracts and deep liquidity locking setups so the system doesn't break during market swings.
                     </li>
                 </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- THE FULL TRACK RECORD STATS -->
+    <section class="stats-section">
+        <div class="container">
+            <h2>The Track Record</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <span class="stat-number">5+</span>
+                    <span class="stat-label">Years Cross-Chain Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">1k+</span>
+                    <span class="stat-label">Airdrop & Growth Campaigns Run</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number">⚡</span>
+                    <span class="stat-label">AI-Driven Vibe Coding Speed</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FULL BREAKDOWN OF EXPERTISE -->
+    <section class="breakdown-section">
+        <div class="container">
+            <h2>Full Breakdown of Capabilities</h2>
+            <div class="breakdown-grid">
+                
+                <div class="breakdown-box">
+                    <h3>💻 Web Development & Tech</h3>
+                    <ul>
+                        <li>Custom Web Applications, automation scripts, and custom tools</li>
+                        <li>Clean, fast business & e-commerce layouts built to scale</li>
+                        <li>High-conversion responsive landing pages and slick portfolios</li>
+                        <li>Domain setup, secure hosting configuration, and infrastructure support</li>
+                    </ul>
+                </div>
+
+                <div class="breakdown-box">
+                    <h3>🔒 Crypto Consulting & P2P</h3>
+                    <ul>
+                        <li>Secure buying and selling of USDT against local INR at top-tier rates</li>
+                        <li>Quick cross-border crypto payments and wallet-to-wallet transactions</li>
+                        <li>Multi-network processing across TRC20, BEP20, ERC20, and Layer-2s</li>
+                        <li>Hands-on guidance for setting up multi-sig wallets, hardware keys, and DeFi platforms</li>
+                    </ul>
+                </div>
+
+                <div class="breakdown-box">
+                    <h3>🌐 Web3 & Blockchain Engineering</h3>
+                    <ul>
+                        <li>Token deployment, naming, supply dynamics, ticker setups, and logo branding</li>
+                        <li>NFT contract deployment, metadata setup, and marketplace listings</li>
+                        <li>Setting up DEX liquidity pools, automated token burns, and multi-wallet airdrops</li>
+                        <li>Protocol stress-testing on incentivized testnets and bug bounty participation</li>
+                    </ul>
+                </div>
+
+                <div class="breakdown-box">
+                    <h3>🎨 Graphic Design & UI/UX</h3>
+                    <ul>
+                        <li>High-fidelity wireframes and modern interfaces for web apps and sites</li>
+                        <li>Striking brand identity, corporate logos, and complete visual asset kits</li>
+                        <li>High-CTR YouTube thumbnails, digital marketing banners, and promotional assets</li>
+                        <li>Custom NFT collection artwork generation, animated community GIFs, and motion graphics</li>
+                    </ul>
+                </div>
+
+                <div class="breakdown-box">
+                    <h3>📈 Growth & Content Marketing</h3>
+                    <ul>
+                        <li>Deep copywriting for technical crypto research articles, guides, and whitepapers</li>
+                        <li>Content strategies designed to build communities directly on X (Twitter) and Telegram</li>
+                        <li>Structuring automated viral gleam campaigns and sustainable user retention funnels</li>
+                    </ul>
+                </div>
+
             </div>
         </div>
     </section>
@@ -102,7 +181,7 @@
         </div>
     </footer>
 
-    <!-- LIGHT/DARK THEME SWITCHER SCRIPT -->
+    <!-- THEME ENGINE LOGIC -->
     <script src="script.js"></script>
 </body>
 </html>
